@@ -1,0 +1,40 @@
+:root {
+    --primary: #f7f6f1;
+    --secondary: #191919;
+    --tertiary: #969696;
+    --red: #eaa9aa;
+    --blue: #3898ec;
+
+
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url(fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf);
+}
+
+* {
+    width: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono';
+
+}
+
+body {
+    background-color: var(--primary);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    width: 100vw;
+    height: 72px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
