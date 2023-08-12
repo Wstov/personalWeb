@@ -116,7 +116,7 @@ a {
     height: 100vh;
     background-color: var(--secondary);
     color: var(--primary);
-    padding: 15vh 11vw 8vh;
+    padding: 15vh 7vw 8vh;
     font-size: 48px;
     left: -100%;
     transition: left 0.7s ease;
