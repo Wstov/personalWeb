@@ -31,7 +31,7 @@ a {
 
 .header {
     /* display: flex; */
-    /* background-color: var(--primary); */
+    background-color: var(--primary);
     width: 100vw;
     height: 65px;
     display: flex;
@@ -39,36 +39,44 @@ a {
     align-items: center;
     border-bottom: solid 1.5px var(--secondary);
     text-transform: uppercase;
+    position: fixed;
+
+}
+
+.header p{
+    margin-right: 35px;
 }
 
 /* BUTTON - MENU */
-#toggle {
+.menu-btn {
     display: block;
     width: 33px;
     height: 30px;
     margin: 30px 20px 10px;
+
+    
 }
 
-#toggle span:after,
-#toggle span:before {
+.menu-btn span:after,
+.menu-btn span:before {
     content: "";
     position: absolute;
     left: 0;
     top: -9px;
 }
 
-#toggle span:after {
+.menu-btn span:after {
     top: 9px;
 }
 
-#toggle span {
+.menu-btn span {
     position: relative;
     display: block;
 }
 
-#toggle span,
-#toggle span:after,
-#toggle span:before {
+.menu-btn span,
+.menu-btn span:after,
+.menu-btn span:before {
     width: 100%;
     height: 5px;
     background-color: var(--secondary);
@@ -78,39 +86,41 @@ a {
 }
 
 /* on activation */
-#toggle.on span {
+.menu-btn.on span {
     background-color: transparent;
 }
 
-#toggle.on span:before {
+.menu-btn.on span:before {
     transform: rotate(45deg) translate(5px, 5px);
+    background-color: var(--primary);
 }
 
-#toggle.on span:after {
+.menu-btn.on span:after {
+    background-color: var(--primary);
     transform: rotate(-45deg) translate(7px, -8px);
 }
 
-#toggle.on+#menu {
+.menu-btn.on+#menu {
     opacity: 1;
     visibility: visible;
 }
+
+
 
 /* --------------------------------------- */
 
 .menu {
     position: fixed;
-    top: 0;
-    right: 0;
+    bottom:  0;
+    /* left: 0; */
     height: 100vh;
     background-color: var(--secondary);
     color: var(--primary);
-    padding: 20vh 11vw 8vh;
+    padding: 15vh 11vw 8vh;
     font-size: 48px;
-
-    display: flex;
-    flex-direction: column;
-    transform: translateX(100%);
-
+    left: -100%;
+    transition: left 0.7s ease;
+    
 }
 
 .menu-header {
@@ -141,7 +151,12 @@ a {
     background-color: #455ce9;
 }
 
+main{
+    padding-top: 65px;
+}
 .section-1 {
+    
     width: 100%;
-    height: calc(100vh - 72px);
+    height: calc(100vh - 65px);
+
 }
