@@ -49,6 +49,11 @@ a {
     margin: 0 30px;
 }
 
+.navbar h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 /* BUTTON - MENU */
 .menu-btn {
     display: block;
@@ -126,9 +131,9 @@ a {
 
 .menu-header {
     font-size: 16px;
-    color: #7f7f81;
+    color: var(--tertiary);
     padding: 16px 0;
-    border-bottom: 1px solid #7f7f81;
+    border-bottom: 1px solid var(--tertiary);
     margin-bottom: 56px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -140,11 +145,14 @@ a {
     flex-direction: column;
     gap: 28px;
     margin-top: 80px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .menu-item {
     transition: transform 0.3s ease;
     color: var(--tertiary);
+    margin-bottom: 15px;
 }
 
 .menu-item:hover {
@@ -163,9 +171,58 @@ main {
 /* END - MENU */
 /* --------------------------------------- */
 /* MAIN  */
-.section-1 {
+.main {
+    margin: 0 5%;
+}
 
+.section-1 {
     width: 100%;
     height: calc(100vh - 65px);
 
+}
+
+.section-1-div {
+    margin: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+
+}
+
+
+
+.text {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 30% 0;
+}
+
+.text h1 {
+    font-size: 4.4rem;
+    text-transform: uppercase;
+    line-height: 70px;
+    margin-bottom: 15px;
+}
+
+.img-container {
+    grid-area: 1 / 2 / 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+
+}
+
+.img-container img {
+    width: 65%;
+    max-height: 85%;
+
+    object-fit: cover;
+
+}
+
+.img-container h2 {
+    font-size: 1.3rem;
 }
