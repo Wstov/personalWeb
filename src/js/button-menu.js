@@ -50,10 +50,10 @@ let isAsideOpen = false;
 theToggle.addEventListener('click', () => {
     if (isAsideOpen) {
         aside.style.left = '-100%';
+        // document.querySelector('body').classList.remove('cover-nav')
     } else {
         aside.style.left = '0';
-        
-        
+        // document.getElementById('cover').classList.add('cover-nav')
 
     }
     isAsideOpen = !isAsideOpen;

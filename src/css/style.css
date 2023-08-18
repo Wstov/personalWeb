@@ -17,11 +17,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
 }
 
 body {
     background-color: var(--primary);
     font-family: 'IBM Plex Mono';
+
 }
 
 a {
@@ -29,24 +32,29 @@ a {
     cursor: pointer;
 }
 
+.w-container {
+    margin: 0 auto;
+    max-width: 1620px;
+}
+
+
 .header {
     /* display: flex; */
     background-color: var(--primary);
-    width: 100vw;
+    width: 100%;
     height: 65px;
     border-bottom: solid 1.5px var(--secondary);
     position: fixed;
-
 }
 
 .navbar {
     height: 65px;
     text-transform: uppercase;
-
+    z-index: 2;
+    padding: 0 20px 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 30px;
 }
 
 .navbar h2 {
@@ -60,8 +68,6 @@ a {
     width: 33px;
     height: 30px;
     margin: 30px 20px 10px;
-
-
 }
 
 .menu-btn span:after,
@@ -112,6 +118,10 @@ a {
     visibility: visible;
 }
 
+
+
+
+
 /* END - BUTTON - MENU */
 /* --------------------------------------- */
 /* MENU */
@@ -160,9 +170,9 @@ a {
     color: var(--primary);
 }
 
-.menu.active+.menu-btn {
+/* .menu.active+.menu-btn {
     background-color: #455ce9;
-}
+} */
 
 main {
     padding-top: 65px;
@@ -171,8 +181,10 @@ main {
 /* END - MENU */
 /* --------------------------------------- */
 /* MAIN  */
+/* Section-1 */
 .main {
-    margin: 0 5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .section-1 {
@@ -191,8 +203,6 @@ main {
 
 }
 
-
-
 .text {
     grid-area: 1 / 1 / 2 / 2;
     margin: 30% 0;
@@ -203,6 +213,10 @@ main {
     text-transform: uppercase;
     line-height: 70px;
     margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 1.2rem;
 }
 
 .img-container {
@@ -224,5 +238,57 @@ main {
 }
 
 .img-container h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+}
+
+/* Section-2 */
+.section-2 {
+    width: 100%;
+    height: 100vh;
+}
+
+.section-2 h2 {
+    font-size: 4.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 40px;
+
+}
+
+.about-text {
+    width: 100%;
+    padding: 20px 0 0 13%;
+    font-size: 1.2rem;
+    padding-bottom: 50px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+    line-height: 30px;
+}
+
+/* LISTS */
+
+.lists {
+    width: 100%;
+    padding: 20px 5% 0 13%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.lists p {
+
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.list-1 ul,
+.list-2 ul,
+.list-3 ul {
+    list-style: none;
+    font-size: 1.2rem;
+
 }
