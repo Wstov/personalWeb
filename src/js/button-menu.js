@@ -1,5 +1,7 @@
-var theToggle = document.getElementById('toggle');
-
+const theToggle = document.getElementById('toggle');
+const aside = document.getElementById('myMenu');
+const divDark = document.getElementById('myDiv');
+let isAsideOpen = false;
 // based on Todd Motto functions
 // https://toddmotto.com/labs/reusable-js/
 
@@ -38,23 +40,31 @@ function toggleClass(elem, className) {
 
 theToggle.onclick = function () {
     toggleClass(this, 'on');
+
     return false;
 }
 
 // Button to show and hide the aside
 
-const aside = document.getElementById('myAside');
-// const toggleAsideButton = document.getElementById('toggleAside');
-let isAsideOpen = false;
-
 theToggle.addEventListener('click', () => {
     if (isAsideOpen) {
         aside.style.left = '-100%';
-        // document.querySelector('body').classList.remove('cover-nav')
+        divDark.style.left = '-100%';
+        // document.getElementById('myDiv').classList.remove('dark')
     } else {
         aside.style.left = '0';
-        // document.getElementById('cover').classList.add('cover-nav')
+        divDark.style.left = '0';
+        // document.getElementById('myDiv').classList.add('dark')
 
     }
     isAsideOpen = !isAsideOpen;
 });
+
+divDark.addEventListener('click', () => {
+    if (isAsideOpen) {
+        aside.style.left = '-100%';
+        divDark.style.left = '-100%';
+        document.getElementById('toggle').classList.remove('on')
+        isAsideOpen = false;
+    }
+})
