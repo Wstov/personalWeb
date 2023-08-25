@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/effect-styles.css">
     <link rel="stylesheet" href="./src/css/fontawesome/css/all.min.css">
     <title>marindev</title>
 </head>
 
 <body>
+    <!-- CURTAIN -->
     <div class="curtain">
         <div class="curtain-content"></div>
     </div>
+    <!-- HEADER -->
     <header class="header">
-        <div class="dark" id="myDiv"></div>
+        <div class="dark" id="myDiv"></div> <!--Horizontal CURTAIN AFTER MENU-->
         <aside class="menu " id="myMenu">
             <div class="menu-header">
                 <p>Navigation</p>
@@ -33,7 +36,6 @@
             <a href="#" id="toggle" class="menu-btn"><span></span></a>
             <h2>Gustavo Marín</h2>
             <p>San José, Costa Rica</p>
-
         </div>
 
     </header>
@@ -44,19 +46,41 @@
         <section class="section-1 w-container">
             <div class="section-1-div">
                 <div class="text">
-                    <h1>Software development engineer</h1>
+                    <h1>
+                        <div class="text-container">
+                            <span class="hidden-text">Software</span>
+                            <div class="cover black-cover"></div>
+                        </div>
+                        <div class="text-container">
+                            <span class="hidden-text">Developer</span>
+                            <div class="cover gray-cover"></div>
+                        </div>
+                        <div class="text-container">
+                            <span class="hidden-text">Engineer</span>
+                            <div class="cover red-cover"></div>
+                        </div>
+                    </h1>
+                    <div class="text-hero" id="text-hero-effect">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam inventore minus tempora
+                            tenetur
+                            quia deserunt. Temporibus sequi labore sint ratione hic mollitia aliquam eaque eligendi
+                            error
+                            dolor facilis, voluptatem saepe?
+                        </p>
 
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam inventore minus tempora tenetur
-                        quia deserunt. Temporibus sequi labore sint ratione hic mollitia aliquam eaque eligendi error
-                        dolor facilis, voluptatem saepe?
-                    </p>
+                    </div>
+
                 </div>
 
                 <div class="img-container">
-                    <img src="./src/img/perfil.webp" alt="profile picture">
-                    <!-- <h2>Gustavo Marín</h2> -->
+                    <img id="img-effect" src="./src/img/perfil.webp" alt="profile picture">
                 </div>
+
+                <!-- <div class="curtain-img">
+                    <img src="./img/pexels-rubaitul-azad-12812698.jpg" alt="Una imagen impresionante">
+                    <div class="curtain-content-img"></div>
+                </div> -->
 
 
             </div>
@@ -64,8 +88,8 @@
 
         <!-- ABOUT ME -->
         <section class="section-2 w-container" id="about">
-            <h2>About me</h2>
-            <div class="about-text">
+            <h2 class="title-effect">About me</h2>
+            <div class="about-text text-effects">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nobis, optio suscipit repudiandae quod
                     quasi quas ea iure. Facere cumque cupiditate quaerat voluptatum architecto fugit ad neque distinctio
                     quas quos?</p>
@@ -113,26 +137,116 @@
                 </div>
             </div>
         </section>
+
         <!-- Discober my work -->
         <section class="section-3 w-container" id="projects">
-            <h2>Discober <br> my work</h2>
-            <div>
+            <h2 class="title-effect">Discober <br> my work</h2>
+            <div class="cards-button-container">
+                <div class="cards">
+                    <div class="card-container">
+                        <div class="card">
+                            <img src="./src/img/imagen1.jpg" alt="Image 1">
+                            <div class="card-content">
+                                <p class="card-title">Título 1</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./src/img/imagen2.jpg" alt="Image 2">
+                            <div class="card-content">
+                                <p class="card-title">Título 2</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./src/img/imagen3.jpg" alt="Image 3">
+                            <div class="card-content">
+                                <p class="card-title">Título 3</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./src/img/imagen4.jpg" alt="Image 4">
+                            <div class="card-content">
+                                <p class="card-title">Título 4</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./src/img/imagen5.jpg" alt="Image 5">
+                            <div class="card-content">
+                                <p class="card-title">Título 5</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./src/img/imagen6.jpg" alt="Image 6">
+                            <div class="card-content">
+                                <p class="card-title">Título 6</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="learn-more ">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text shake-bottom">More Projects</span>
+                </button>
 
             </div>
-            <button class="learn-more">
-                <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">More Projects</span>
-            </button>
+        </section>
+
+        <section class="infinit-scroll">
+            <div class="scroll">
+                <div class="scroll-container">
+                    <div class="scroll-row left-to-right">
+                        <ul class="programming-languages">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>Ruby</li>
+                            <li>Swift</li>
+                            <li>PHP</li>
+                            <li>Go</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                    <div class="scroll-row right-to-left">
+                        <ul class="programming-languages">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>Ruby</li>
+                            <li>Swift</li>
+                            <li>PHP</li>
+                            <li>Go</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                    <div class="scroll-row slow-left-to-right">
+                        <ul class="programming-languages">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>Ruby</li>
+                            <li>Swift</li>
+                            <li>PHP</li>
+                            <li>Go</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- Academy -->
         <section class="section-4" id="academy">
-            <h2>Academy</h2>
+            <h2 class="title-effect">Academy</h2>
         </section>
         <!-- Let's connect! -->
         <section class="section-5" id="contact">
-            <h2>Let's connect!</h2>
+            <h2 class="title-effect">Let's connect!</h2>
         </section>
     </main>
     <!-- footer -->
@@ -144,7 +258,8 @@
 
     <script src="./src/js/button-menu.js"></script>
     <script src="./src/js/curtainEffect.js"></script>
-    <!-- <script src="./src/js/index.js"></script> -->
+    <script src="./src/js/cards-effects.js"></script>
+    <script src="./src/js/img-perfil-effect.js"></script>
 </body>
 
 </html>
